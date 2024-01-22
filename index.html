@@ -63,7 +63,7 @@
           <h1>
             <a href="">
               <figure>
-                <img src="./img/logo.png" alt="" />
+                <img src="./img/logo.png" alt="Solana Suite" />
               </figure>
             </a>
           </h1>
@@ -106,6 +106,9 @@
             <div class="aboutWrap">
               <article>
                 <h3>All-in-one package</h3>
+                <div class="txt">
+                  All the libraries needed for development are included.
+                </div>
                 <dl>
                   <dd>
                     <ul>
@@ -135,104 +138,21 @@
                 </dl>
               </article>
               <article>
-                <h3>Both Node.js and Broser does one code</h3>
+                <h3>Function driven</h3>
                 <div class="txt">
-                  No need to change source code in Node.js and Borwser js. There
-                  is no need to be aware of <br />the environment in which the
-                  calling program will run.It is useful for building most Solana
-                  <br />blockchain services because it provides a variety of
-                  functions as a single library, including
+                  It's possible to achieve what you want with just a single
+                  function call.
                 </div>
-                <pre>
-                <code class="language-javascript">
-//// Example Mint SPL-TOKEN ////
-const inst = await SplToken.mint(
-  {Owner PublicKey},
-  [{Owner Keypair}],
-  {totalAmount},
-  {decimals}
-);
-await inst.submit();
-                </code>
-              </pre>
+                <br />
+                <img src="./img/function-driven.png" alt="" />
               </article>
               <article>
-                <h3>Response handling using Result type</h3>
+                <h3>Less code</h3>
                 <div class="txt">
-                  It does not suddenly stop programs using solana-suite by
-                  throwing an Exception when <br />an error occurs. Traditional
-                  try-catch is not necessary.
+                  The source code requires only a small amount.
                 </div>
-                <pre>
-                <code class="language-javascript">
-const response: Result&lt;string, Error&gt;
-//// response case: If/ElseIf condition ////
-  if (response.isOk) {
-   console.log('# success: ', response.value);
-  } else if (response.isErr) {
-   console.log('# error: ', response.error);
-  }
-//// response case: Match condition ////
-  response.match(
-    (value: string) =&gt; console.log('# success: ', value),
-    (error: Error) =&gt; console.error('# error: ', error)
-);
-                </code>
-              </pre>
-              </article>
-              <article>
-                <h3>Gas-less transaction</h3>
-                <div class="txt">
-                  Gas-less transactions are necessary to enhance UX and can be
-                  easily implemented with feePayer.
-                </div>
-                <pre>
-                  <code class="language-javascript">
-//// create gas-less transaction ////
-  await Metaplex.feePayerPartialSignMint(
-    user.pubkey,
-    user.secret,
-    metadata,
-    feePayer.pubkey 
-  );
-                  </code>
-                </pre>
-              </article>
-              <article>
-                <h3>Multiple transaction support</h3>
-                <div class="txt">
-                  Multiple instructions can be grouped together and executed as
-                  a single transaction. <br />
-                  This makes it easy to implement batch processing. Also, by
-                  combining them into a <br />single transaction, unnecessary
-                  access to the RPC server can be avoided.
-                </div>
-                <pre>
-                <code class="language-javascript">
-//// Multiple transaction ////
-const instruction1 =  // Action of some kind
-const instruction2 =  // Action of some kind
-const instruction3 =  // Action of some kind
-await [instruction1, instruction2, instruction3].submit();
-                </code>
-              </pre>
-              </article>
-              <article>
-                <h3>SOL/SPL-TOKEN multisig support</h3>
-                <div class="txt">
-                  We support multisig as much as possible, transfer, mint
-                  SPL-TOKEN, making memos
-                </div>
-                <pre>
-                <code class="language-javascript">
-//// Create Multisig ////
-  await Multisig.create(
-    {Number Of Signers},
-    {Owner Keypair},
-    [{Signer1 PublicKey}, {Signer1 PublicKey}]
-);
-                </code>
-              </pre>
+                <br />
+                <img src="./img/less-code.png" alt="" />
               </article>
             </div>
             <div class="aboutBtn">
@@ -244,7 +164,7 @@ await [instruction1, instruction2, instruction3].submit();
         </div>
       </main>
       <footer id="footer" class="footer">
-        <p>&copy;Supported by Atonoy</p>
+        <p><a href="https://atonoy.co/en">&copy;Supported by Atonoy</a></p>
       </footer>
     </div>
     <script src="./js/libs.js"></script>
