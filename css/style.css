@@ -236,7 +236,7 @@
     width: 347px;
   }
   .about__inner .intro {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 32px;
     font-weight: 400;
     margin-top: 42px;
@@ -262,8 +262,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 118px;
-    height: 118px;
+    width: 108px;
+    height: 108px;
     -moz-border-radius: 50%;
     border-radius: 50%;
   }
@@ -280,8 +280,8 @@
   }
   .about__inner .aboutWrap article::after {
     content: counter(ar, decimal-leading-zero);
-    font-size: 46px;
-    line-height: 74px;
+    font-size: 40px;
+    line-height: 70px;
     letter-spacing: 0.1em;
     font-family: "Fjalla One", sans-serif;
     color: #fff;
@@ -296,17 +296,17 @@
     background: -moz- oldlinear-gradient(top, #6ac4fc 0%, #fd63d7 100%);
     background: linear-gradient(180deg, #6ac4fc 0%, #fd63d7 100%);
     text-align: center;
-    padding: 43px 0 0 0;
+    padding: 36px 0 0 0;
   }
   .about__inner .aboutWrap article h3 {
     margin-top: 4.5em;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 32px;
     font-weight: 700;
     color: #000000;
   }
   .about__inner .aboutWrap article .txt {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
     font-weight: 400;
     color: #000000;
