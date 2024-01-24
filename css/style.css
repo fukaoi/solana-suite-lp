@@ -237,10 +237,9 @@
   }
   .about__inner .intro {
     font-size: 30px;
-    line-height: 32px;
     font-weight: 400;
     margin-top: 42px;
-    color: #111111;
+    color: #333333;
   }
   .about__inner .aboutWrap {
     counter-reset: ar;
